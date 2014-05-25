@@ -6,5 +6,5 @@ default:
                     selenium2: ~
             browser_name: firefox
             show_auto: false
-            base_url: http://localhost:8000/
+            base_url: http://localhost:80/
 
