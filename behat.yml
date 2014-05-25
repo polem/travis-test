@@ -1,0 +1,10 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            sessions:
+                default:
+                    selenium2: ~
+            browser_name: firefox
+            show_auto: true
+            base_url: http://localhost:8000/
+

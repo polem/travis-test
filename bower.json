@@ -1,0 +1,21 @@
+{
+  "name": "travis-test",
+  "version": "0.0.0",
+  "homepage": "https://github.com/polem/travis-test",
+  "authors": [
+    "Paul-Emile MINY <paulemile.miny@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1"
+  }
+}

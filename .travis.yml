@@ -1,0 +1,23 @@
+language: php
+php:
+  - 5.5
+
+before_install:
+  - sudo apt-get update > /dev/null
+
+install:
+  - sudo sed -i -e "s,/var/www,$(pwd),g" /etc/apache2/sites-available/default
+  - sudo /etc/init.d/apache2 restart
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction
+  - sh -e /etc/init.d/xvfb start
+  - export DISPLAY=:99
+  - curl http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar > selenium.jar
+  - java -jar selenium.jar > /dev/null &
+  - sleep 5
+
+script:
+  - php bin/behat
+
