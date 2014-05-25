@@ -4,6 +4,7 @@ php:
 
 before_install:
   - sudo apt-get update > /dev/null
+  - sudo rm -rf /dev/shm && sudo ln -s /run/shm /dev/shm
 
 install:
   - sudo sed -i -e "s,/var/www,$(pwd),g" /etc/apache2/sites-available/default
