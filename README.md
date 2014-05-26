@@ -13,7 +13,6 @@ Install depedencies
 Get selenium
 
 `curl http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar > selenium.jar`
-java -jar selenium.jar > /dev/null &
 
 ## Run test
 
